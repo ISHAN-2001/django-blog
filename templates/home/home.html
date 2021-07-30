@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'home/home.css' %}">
+{% endblock links %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %} 
+
+<main>
+    <div class="center">
+        <h2>Welcome to Django-Blog</h2>
+        <p>Website is powered by django</p>
+        <a href="{% url 'blogHome' %}" class="btn123">See blogs</a>
+    </div>
+</main>
+
+
+{% endblock body %}
+

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'home/contact.css' %}">
+{% endblock links %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %} 
+
+<main>
+<form action="{% url 'homecontact' %}" class="form" method="POST"> 
+  {% csrf_token %}
+      <h1>Contact Us!</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="name"><strong>Name</strong></label>
+        <input type="text" placeholder="Enter Username" name="name" required>
+
+        <label for="Phone"><strong>Phone</strong></label>
+        <input type="text" placeholder="Phone Number" name="phone" required>
+
+        <label for="Email"><strong>Email</strong></label>
+        <input type="email" placeholder="Email Address" name="email" required>
+
+        <textarea name="message"  cols="120" rows="5" placeholder="message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+
+    </form>
+</main>
+
+<script>
+    let active = document.querySelectorAll(".nav-link");
+    console.log(active[2]);
+    active[0].classList.remove("active");
+    active[2].classList.add("active");
+
+</script>
+{% endblock body %}

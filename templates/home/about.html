@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %} 
+
+<h1>This is about.html</h1>
+
+
+<script>
+    let active = document.querySelectorAll(".nav-link");
+    console.log(active[3]);
+    active[0].classList.remove("active");
+    active[3].classList.add("active");
+
+</script>
+{% endblock body %}

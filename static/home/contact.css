@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin: 0 auto;
+    font-size: 15px;
+    max-width: 1100px;
+    }
+main .form {
+    border: 5px solid #f1f1f1;
+    }
+   main input{
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+   main  button {
+    background-color: #8ebf42;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 100%;
+    }
+   main h1 {
+    text-align:center;
+    font-size:18;
+    }
+   main button:hover {
+    opacity: 0.8;
+    }
+   main .formcontainer {
+    text-align: left;
+    margin: 24px 50px 12px;
+    }
+   main .container {
+    padding: 16px 0;
+    text-align:left;
+    }
+   main span.psw {
+    float: right;
+    padding-top: 0;
+    padding-right: 15px;
+    }
+    /* Change styles for span on extra small screens */
+    @media screen and (max-width: 300px) {
+    main span.psw {
+    display: block;
+    float: none;
+    }
+    
+    main textarea{
+        outline: none;
+        margin: 10px 10px;
+        padding: 10px 10px;
+    }

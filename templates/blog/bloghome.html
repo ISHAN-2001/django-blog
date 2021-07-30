@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'blog/bloghome.css' %}">
+{% endblock links %}
+{% block title %}Blogs{% endblock title %}
+
+{% block body %} 
+
+<main>
+
+     {% for i in blogs %}
+
+     {% url 'blogPost' i.sno  as url1 %}
+     <a href="{{url1}}">
+       <div class="blogs">
+            <p class="category">{{i.category}}</p>
+            <h3 class="topic">{{i.topic}}</h3>
+            <p class="date">{{i.date}}</p>
+            <p class="desc">{{i.desc|truncatechars:100}}</p>
+       </div> </a>
+       
+       {% endfor %}
+       
+</main>
+
+
+<script>
+    let active = document.querySelectorAll(".nav-link");
+    console.log(active[1]);
+    active[0].classList.remove("active");
+    active[1].classList.add("active");
+
+</script>
+{% endblock body %}
