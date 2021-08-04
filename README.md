@@ -10,3 +10,8 @@ python -r requirements.txt
 python manage.py runserver
  
  ```
+ To create some blogs register in django-admin and add some blogs
+ 
+ Future Planning:--
+ 1. Adding Authorization
+ 2. Add Blogs without Admin 
