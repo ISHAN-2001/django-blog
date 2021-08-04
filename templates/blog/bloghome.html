@@ -3,27 +3,28 @@
 
 {% load static %}
 {% block links %}
-    <link rel="stylesheet" href="{% static 'blog/bloghome.css' %}">
+<link rel="stylesheet" href="{% static 'blog/bloghome.css' %}">
 {% endblock links %}
 {% block title %}Blogs{% endblock title %}
 
-{% block body %} 
+{% block body %}
 
 <main>
 
-     {% for i in blogs %}
+    {% for i in blogs %}
 
-     {% url 'blogPost' i.sno  as url1 %}
-     <a href="{{url1}}">
-       <div class="blogs">
+    {% url 'blogPost' i.sno as url1 %}
+    <a href="{{url1}}">
+        <div class="blogs">
             <p class="category">{{i.category}}</p>
             <h3 class="topic">{{i.topic}}</h3>
             <p class="date">{{i.date}}</p>
             <p class="desc">{{i.desc|truncatechars:100}}</p>
-       </div> </a>
-       
-       {% endfor %}
-       
+        </div>
+    </a>
+
+    {% endfor %}
+
 </main>
 
 
