@@ -14,4 +14,4 @@ python manage.py runserver
  
  ### Future Planning:--
  1. Adding Authorization
- 2. Add Blogs without Admin 
+ 2. Add Blogs without going to Admin 
